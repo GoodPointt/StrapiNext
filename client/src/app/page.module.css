@@ -1,9 +1,9 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  padding: 3rem 0;
   min-height: 100vh;
 }
 
@@ -40,8 +40,10 @@
 }
 
 .grid {
+  margin: 100px auto;
+  padding: 0 3em;
   display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
+  grid-template-columns: repeat(6, minmax(25%, auto));
   max-width: 100%;
   width: var(--max-width);
 }
@@ -76,7 +78,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  /* position: relative; */
   padding: 4rem 0;
 }
 
