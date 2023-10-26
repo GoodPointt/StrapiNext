@@ -10,7 +10,7 @@ export const getAllCases = async () => {
     const { data } = await instance.get(`/api/cases`);
     return data;
   } catch (e) {
-    console.log(e);
+    console.error(e);
   }
 };
 
@@ -19,6 +19,6 @@ export const getBanner = async () => {
     const { data } = await instance.get(`/api/section-hero`);
     return data;
   } catch (e) {
-    console.log(e);
+    console.error(e);
   }
 };

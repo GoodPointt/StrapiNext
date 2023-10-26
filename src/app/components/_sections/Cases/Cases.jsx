@@ -1,19 +1,12 @@
-import { getFileUrl } from '@/utils/getFileUrl';
 import React from 'react';
 
 const Cases = ({ cases }) => {
-  console.log(cases);
   return (
     <div style={{ margin: '100px auto', width: '90%' }}>
       {cases.length > 0 && (
         <ul
           style={{
             width: '100%',
-            // display: 'flex',
-            // gap: 30,
-            // justifyContent: 'space-between',
-            // flexWrap: 'wrap',
-            // alignItems: 'center',
             display: 'grid',
             gridTemplateColumns: 'repeat(3, minmax(25%, auto))',
             gap: 20,
@@ -24,7 +17,7 @@ const Cases = ({ cases }) => {
           {cases.map((c) => (
             <li key={c.id} style={{ height: 200, position: 'relative' }}>
               <img
-                src={getFileUrl(c.attributes.imgURL)}
+                src={c.attributes.imgURL}
                 alt={c.attributes.title}
                 style={{ width: '100%', height: '100%' }}
               />
