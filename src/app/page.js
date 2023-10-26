@@ -6,6 +6,9 @@ import { getAllCases, getBanner } from '@/api';
 import Banner from './components/_sections/Banner/Banner';
 import { useEffect, useState } from 'react';
 import Cases from './components/_sections/Cases/Cases';
+import Abstract from './components/_sections/Abstract/Abstract';
+import VerticalParallax from './components/_sections/VerticalParallax/VerticalParallax';
+import StickyParallax from './components/_sections/StickyParallax/StickyParallax';
 
 export default function Home() {
   const [banner, setBaner] = useState();
@@ -35,7 +38,6 @@ export default function Home() {
         <h2>{banner?.attributes.title}</h2>
         <p>{banner?.attributes.desc}</p>
       </div>
-
       <Banner path={banner?.attributes.promoURL} />
       <div className={styles.grid}>
         <a
@@ -88,8 +90,14 @@ export default function Home() {
           </p>
         </a>
       </div>
-      <Cases cases={cases} />
+      <Abstract />
+      <div style={{ width: '1024px', height: '720px' }}>
+        {' '}
+        <StickyParallax />
+      </div>
 
+      <Cases cases={cases} />
+      <VerticalParallax />
       <div className={styles.description}>
         <div>
           <a
