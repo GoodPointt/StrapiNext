@@ -39,6 +39,9 @@ export default function Home() {
         <p>{banner?.attributes.desc}</p>
       </div>
       <Banner path={banner?.attributes.promoURL} />
+
+      <Cases cases={cases} />
+
       <div className={styles.grid}>
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
@@ -92,11 +95,9 @@ export default function Home() {
       </div>
       <Abstract />
       <div style={{ width: '1024px', height: '720px' }}>
-        {' '}
         <StickyParallax />
       </div>
 
-      <Cases cases={cases} />
       <VerticalParallax />
       <div className={styles.description}>
         <div>
